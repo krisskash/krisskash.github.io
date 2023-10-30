@@ -3,23 +3,54 @@
 <head>
     <title>Index Page</title>
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Rancho');
+
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            background-color: #333;
+            color: red;
+            font-family: 'Rancho', cursive;
         }
 
         .container {
             text-align: center;
+            position: relative;
+        }
+
+        .text-3d {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) perspective(500px) rotateX(0deg) rotateY(0deg);
+            font-size: 3rem;
+            letter-spacing: 0.1em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform-origin: top left;
+            animation: fire-animation 2s infinite;
+            font-family: 'Arial', sans-serif;
+            display: inline-block;
+            margin-top: 1em;
+        }
+
+        @keyframes fire-animation {
+            0% {
+                color: red;
+            }
+            50% {
+                color: orange;
+            }
+            100% {
+                color: red;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Index Page!</h1>
-        <p>Under construction.</p>
-    </div>
+        <h1 class="text-3d">Welcome to my index page! Currently Under Construction.</h1>
 </body>
 </html>

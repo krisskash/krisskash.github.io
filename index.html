@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Index Page</title>
+    <title>Under Construction</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Rancho');
 
@@ -12,7 +12,7 @@
             height: 100vh;
             margin: 0;
             background-color: #333;
-            color: red;
+            color: white;
             font-family: 'Rancho', cursive;
         }
 
@@ -23,34 +23,28 @@
 
         .text-3d {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) perspective(500px) rotateX(0deg) rotateY(0deg);
-            font-size: 3rem;
-            letter-spacing: 0.1em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            transform-origin: top left;
-            animation: fire-animation 2s infinite;
-            font-family: 'Arial', sans-serif;
-            display: inline-block;
-            margin-top: 1em;
         }
 
-        @keyframes fire-animation {
-            0% {
-                color: red;
-            }
-            50% {
-                color: orange;
-            }
-            100% {
-                color: red;
-            }
+        .gear {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-3d">Welcome to my index page! Currently Under Construction.</h1>
+        <div class="gear"></div>
+        <h1>Currently under construction</h1>
+    </div>
 </body>
 </html>
